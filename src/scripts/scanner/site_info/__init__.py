@@ -15,6 +15,7 @@ HOST\tSTRING\tThe host and url to scan (default: localhost)
 PROTOCOL\tSTRING\tThe protocol to use (default: http)
 """
 
+
 def run(variables, variables_data):
     host = "localhost"
     if "HOST" in variables:
@@ -23,7 +24,7 @@ def run(variables, variables_data):
     protocol = "http"
     if "PROTOCOL" in variables:
         protocol = variables_data[variables.index("PROTOCOL")]
-    
+
     try:
         print(f"Host: {host}")
         response = requests.get(f"{protocol}://{host}")
@@ -35,7 +36,7 @@ def run(variables, variables_data):
             print("Server: OTHER")
         if "X-Powered-By" in response.headers:
             print(f"Webserver: {response.headers['X-Powered-By']}")
-        
+
         if "wp-content" in response.text:
             print("Using WordPress")
 
