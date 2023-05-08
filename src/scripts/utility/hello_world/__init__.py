@@ -8,6 +8,7 @@ NAME\tTYPE\tDESCRIPTION
 NAME\tSTRING\tThe name to print (default: world)
 """
 
+
 def run(variables, variables_data):
     name = "world"
     if "NAME" in variables:

@@ -10,11 +10,12 @@ HOST\tSTRING\tThe host and url to scan (default: localhost)
 PROTOCOL\tSTRING\tThe protocol to use (default: http)
 """
 
+
 def run(variables, variables_data):
     host = "localhost"
     if "HOST" in variables:
         host = variables_data[variables.index("HOST")]
-    
+
     protocol = "http"
     if "PROTOCOL" in variables:
         protocol = variables_data[variables.index("PROTOCOL")]
@@ -31,7 +32,7 @@ def run(variables, variables_data):
         links = []
         for line in response.text.split("\n"):
             if "<a href=" in line:
-                link = line.split("<a href=")[1].split(">")[0].replace('"','')
+                link = line.split("<a href=")[1].split(">")[0].replace('"', "")
                 if "." in link:
                     links.append(link)
         log.log(f"Found {len(links)} links")

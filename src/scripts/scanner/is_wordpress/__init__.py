@@ -12,6 +12,7 @@ TIMEOUT\tINTEGER\tThe timeout in seconds (default: 5)
 PROTOCOL\tSTRING\tThe protocol to use (default: http)
 """
 
+
 def run(variables, variables_data):
     host = "localhost"
     if "HOST" in variables:
@@ -27,7 +28,7 @@ def run(variables, variables_data):
             protocol = variables_data[variables.index("PROTOCOL")]
         else:
             protocol = "http"
-        response = requests.get(f"{protocol}://{host}:{port}", timeout=timeout) 
+        response = requests.get(f"{protocol}://{host}:{port}", timeout=timeout)
         if "wp-content" in response.text:
             log.ok(f"Found WordPress on {host}:{port}")
         else:
