@@ -6,7 +6,7 @@ A metasploit like tool but for scanning and retrieving data from websites.
 
 ```bash
 git clone
-cd py-scan
+cd pyscan
 python3 src/main.py
 ```
 
