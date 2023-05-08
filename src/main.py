@@ -1,7 +1,7 @@
 # Py scanner
-# A metasploit like terminal interface for scanning and finding things on the internet
-# Scripts are located in src/scripts
-# This file is in src/main.py
+# A metasploit like tool but for scanning and retrieving data from websites.
+# Github: https://www.github.com/awesomelewis2007/pyscan
+# By: Lewis Evans
 
 import os
 import sys

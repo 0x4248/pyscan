@@ -1,3 +1,8 @@
+# Py scanner
+# A metasploit like tool but for scanning and retrieving data from websites.
+# Github: https://www.github.com/awesomelewis2007/pyscan
+# By: Lewis Evans
+
 from modules import log
 import requests
 
