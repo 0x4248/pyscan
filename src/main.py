@@ -13,6 +13,7 @@ VERSION = "1.0.0"
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
+
 def run_script(script_name, variables, variables_data):
     name = script_name.replace("src/", "").replace("/", ".").replace(".py", "")
     script = importlib.import_module(name)
