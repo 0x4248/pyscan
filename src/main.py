@@ -13,7 +13,6 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 from scripts import *
 
-
 def run_script(script_name, variables, variables_data):
     name = script_name.replace("src/", "").replace("/", ".").replace(".py", "")
     script = importlib.import_module(name)
@@ -160,7 +159,8 @@ def terminal():
                 log.error("No script selected")
             else:
                 run_script(current_script, variables, variables_data)
-
+        else:
+            os.system(command)
 
 if __name__ == "__main__":
     terminal()
