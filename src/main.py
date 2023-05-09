@@ -9,10 +9,9 @@ import importlib
 import modules.log as log
 from colorama import Fore, Back, Style
 
+VERSION = "1.0.0"
+
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
-
-from scripts import *
-
 
 def run_script(script_name, variables, variables_data):
     name = script_name.replace("src/", "").replace("/", ".").replace(".py", "")
@@ -81,7 +80,7 @@ def search_scripts(query):
 
 
 def welcome():
-    print("Welcome to py-scan!")
+    print("Welcome to py-scan! Version " + VERSION)
     print("There are " + str(count_scripts()) + " scripts available")
     print("Type help for a list of commands")
 
