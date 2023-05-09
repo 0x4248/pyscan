@@ -7,6 +7,7 @@ import os
 import sys
 import importlib
 import modules.log as log
+import modules.banners as banners
 from colorama import Fore, Back, Style
 
 VERSION = "1.0.0"
@@ -81,6 +82,7 @@ def search_scripts(query):
 
 
 def welcome():
+    banners.print_banner()
     print("Welcome to py-scan! Version " + VERSION)
     print("There are " + str(count_scripts()) + " scripts available")
     print("Type help for a list of commands")
