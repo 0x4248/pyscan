@@ -179,5 +179,6 @@ def terminal():
         else:
             os.system(command)
 
+
 if __name__ == "__main__":
     terminal()
