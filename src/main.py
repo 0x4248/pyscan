@@ -130,6 +130,9 @@ def terminal():
                     log.error("Script not found")
 
         elif command.startswith("set"):
+            if len(command.split(" ")) < 3:
+                log.error("Usage: set <variable> <value>")
+                continue
             variable = command.split(" ")[1].upper()
             value = command.split(" ")[2]
             print(variable + " => " + value)
@@ -140,6 +143,9 @@ def terminal():
                 variables_data.append(value)
 
         elif command.startswith("get"):
+            if len(command.split(" ")) < 2:
+                log.error("Usage: get <variable>")
+                continue
             variable = command.split(" ")[1]
             if variable == "*":
                 for i in range(len(variables)):
@@ -162,7 +168,6 @@ def terminal():
                 run_script(current_script, variables, variables_data)
         else:
             os.system(command)
-
 
 if __name__ == "__main__":
     terminal()
