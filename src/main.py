@@ -165,7 +165,17 @@ def terminal():
             if current_script == "":
                 log.error("No script selected")
             else:
-                run_script(current_script, variables, variables_data)
+                try:
+                    run_script(current_script, variables, variables_data)
+                except Exception as e:
+                    log.fatal("An error has occurred in the script and has caused the script to stop")
+                    log.fatal("Traceback:")
+                    print("========================================")
+                    print(e)
+                    print("========================================")
+                    log.fatal("Check if the permissions are correct. If you keep getting this error")
+                    log.fatal("please report it to the github issues page")
+                    log.fatal("https://www.github.com/awesomelewis2007/pyscan/issues")
         else:
             os.system(command)
 
