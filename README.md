@@ -2,6 +2,10 @@
 
 A metasploit like tool but for scanning and retrieving data from websites.
 
+## Demo
+
+![Demo image](doc/demo.png)
+
 ## Installation
 
 ```bash
