@@ -5,4 +5,4 @@
 # By: Lewis Evans
 
 colorama==0.4.6
-requests==2.30.0
+requests==2.31.0
