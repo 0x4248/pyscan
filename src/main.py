@@ -90,7 +90,6 @@ def welcome():
 
 
 def terminal():
-    welcome()
     last_result = []
     current_script = ""
     variables = []
@@ -188,4 +187,5 @@ def terminal():
 
 
 if __name__ == "__main__":
+    welcome()
     terminal()
