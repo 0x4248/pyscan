@@ -1,6 +1,6 @@
 # Py scanner
 # A metasploit like tool but for scanning and retrieving data from websites.
-# Github: https://www.github.com/awesomelewis2007/pyscan
+# Github: https://www.github.com/lewisevans2007/pyscan
 # Licence: GNU General Public License v3.0
 # By: Lewis Evans
 

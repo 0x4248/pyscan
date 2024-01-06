@@ -1,6 +1,6 @@
 # Py scanner
 # A metasploit like tool but for scanning and retrieving data from websites.
-# Github: https://www.github.com/awesomelewis2007/pyscan
+# Github: https://www.github.com/lewisevans2007/pyscan
 # Licence: GNU General Public License v3.0
 # By: Lewis Evans
 
@@ -181,7 +181,7 @@ def terminal():
                         "Check if the permissions are correct. If you keep getting this error"
                     )
                     log.fatal("please report it to the github issues page")
-                    log.fatal("https://www.github.com/awesomelewis2007/pyscan/issues")
+                    log.fatal("https://www.github.com/lewisevans2007/pyscan/issues")
         else:
             os.system(command)
 
