@@ -5,4 +5,4 @@
 # By: 0x4248
 
 colorama==0.4.6
-requests==2.32.4
+requests==2.32.5
